@@ -53,84 +53,67 @@
             <!-- Contact Form Section -->
             <section class="contact-form">
                 <h2>Send Us a Message</h2>
-                <form action="https://httpbin.org/post" method="post">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
+                <form action="#" method="post">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
 
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                    </div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-                    <div class="form-group">
-                        <label>Purpose of Message</label>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="purpose" value="general" required>
-                                <span class="radio-custom"></span>
-                                General Inquiry
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="purpose" value="reservation">
-                                <span class="radio-custom"></span>
-                                Reservation Question
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="purpose" value="suggestion">
-                                <span class="radio-custom"></span>
-                                Website Suggestion
-                            </label>
-                        </div>
-                    </div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
 
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..."
-                            required></textarea>
-                    </div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter message subject">
 
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-option">
-                            <input type="checkbox" name="newsletter" value="subscribe">
-                            <span class="checkbox-custom"></span>
-                            Please subscribe me to the monthly newsletter
-                        </label>
-                    </div>
+                    <label>How did you hear about us?</label>
+                    <input type="radio" id="social" name="source" value="social">
+                    <label for="social">Social Media</label>
 
-                    <button type="submit" class="submit-btn">Send Your Message</button>
+                    <input type="radio" id="friend" name="source" value="friend">
+                    <label for="friend">Friend</label>
+
+                    <input type="radio" id="other" name="source" value="other">
+                    <label for="other">Other</label>
+
+                    <label for="feedback">Your Message:</label>
+                    <textarea id="feedback" name="feedback" rows="5"
+                        placeholder="Write your message here..."></textarea>
+
+                    <label for="subscribe">Subscribe to Newsletter</label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+
+                    <button type="submit">Send Your Message</button>
                 </form>
-            </section>
-        </div>
 
-        <!-- Employee Profiles Section -->
-        <section class="employee-profiles">
-            <h2>We Are Here to Serve You</h2>
-            <div class="employees-grid">
-                <figure class="employee">
-                    <img src="images/employee1.jpg" alt="Sarah Johnson - Adventure Guide">
-                    <figcaption>
-                        <strong>Sarah Johnson</strong><br>
-                        Adventure Guide
-                    </figcaption>
-                </figure>
-                <figure class="employee">
-                    <img src="images/employee2.jpg" alt="Mike Chen - Safety Director">
-                    <figcaption>
-                        <strong>Mike Chen</strong><br>
-                        Safety Director
-                    </figcaption>
-                </figure>
-                <figure class="employee">
-                    <img src="images/employee3.jpg" alt="Emily Rodriguez - Customer Experience Manager">
-                    <figcaption>
-                        <strong>Emily Rodriguez</strong><br>
-                        Customer Experience Manager
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+
+                <!-- Employee Profiles Section -->
+                <section class="employee-profiles">
+                    <h2>We Are Here to Serve You</h2>
+                    <div class="employees-grid">
+                        <figure class="employee">
+                            <img src="images/employee1.jpg" alt="Sarah Johnson - Adventure Guide">
+                            <figcaption>
+                                <strong>Sarah Johnson</strong><br>
+                                Adventure Guide
+                            </figcaption>
+                        </figure>
+                        <figure class="employee">
+                            <img src="images/employee2.jpg" alt="Mike Chen - Safety Director">
+                            <figcaption>
+                                <strong>Mike Chen</strong><br>
+                                Safety Director
+                            </figcaption>
+                        </figure>
+                        <figure class="employee">
+                            <img src="images/employee3.jpg" alt="Emily Rodriguez - Customer Experience Manager">
+                            <figcaption>
+                                <strong>Emily Rodriguez</strong><br>
+                                Customer Experience Manager
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
     </main>
 
     <footer>
