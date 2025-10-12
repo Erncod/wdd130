@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="About Whitewater Rafting Co. — our mission, values, and the team committed to safe river adventures." />
+    <title>Whitewater Rafting Co. — About Us</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Whitewater Rafting Co. logo" class="logo" />
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container about-hero" aria-labelledby="about-heading">
+            <h1 id="about-heading">About Whitewater Rafting Co.</h1>
+            <p class="lead">We are a team of outdoor professionals dedicated to safe, fun, and sustainable river
+                experiences.</p>
+        </section>
+
+        <section class="container about-grid">
+            <div>
+                <h2>Our Story</h2>
+                <p>Founded by river guides and outdoor enthusiasts, Whitewater Rafting Co. started to share authentic
+                    river experiences while maintaining high safety standards. Over the years we've built a reputation
+                    for reliable guides and well-organized trips.</p>
+            </div>
+
+            <div>
+                <h2>Our Mission & Values</h2>
+                <ul>
+                    <li><strong>Safety First:</strong> comprehensive training and modern equipment.</li>
+                    <li><strong>Respect:</strong> for participants and the river environment.</li>
+                    <li><strong>Inclusion:</strong> trips designed for families and experienced paddlers alike.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container quote">
+            <blockquote>
+                “Life is a journey, not a destination. As we travel along life's pathway, we encounter challenges… but
+                we must finish strong.”
+                <footer>— President Thomas S. Monson</footer>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>© <span id="year-about"></span> Whitewater Rafting Co. — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year-about').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

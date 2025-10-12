@@ -2,56 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eze Ernest Tobechukwu | WDD 130</title>
-
-    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description"
-        content="Eze Ernest Tobechukwu | WDD 130 Home Page. Learn about me, my projects, and practice web development.">
-    <meta name="author" content="Eze Ernest Tobechukwu">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
+        content="Whitewater Rafting Co. — join us for thrilling whitewater rafting adventures for all ages. Book a trip today!" />
+    <title>Whitewater Rafting Co. — Home</title>
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
-        </nav>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Whitewater Rafting Co. logo" class="logo" />
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Eze Ernest Tobechukwu | WDD 130</h1>
+        <!-- HERO (uses CSS Grid) -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <img src="images/hero.jpg" alt="People rafting on a river" class="hero-image" />
+            <div class="hero-content">
+                <h1 id="hero-heading">Adventure Awaits on the River</h1>
+                <p class="lead">Experience expert-guided whitewater rafting trips for beginners, families, and thrill
+                    seekers.</p>
+                <p><a href="trips.html" class="btn primary">Explore Trips</a></p>
+            </div>
+        </section>
 
-        <img src="images/profile.jpg" alt="Eze Ernest Tobechukwu" width="200">
+        <!-- Feature / Intro -->
+        <section class="container intro-grid" aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Welcome to Whitewater Rafting Co.</h2>
+            <p>We combine safety, expert guides, and unforgettable rivers to create experiences you’ll remember for
+                life. Choose a trip, bring friends, and enjoy nature responsibly.</p>
 
-        <p>
-            Hello! My name is Eze Ernest Tobechukwu. I am passionate about education, science, and technology.
-            With a background in chemistry, nutrition, and software development, I enjoy combining creativity
-            and problem-solving to build meaningful solutions. I also run a technology company that develops
-            websites, mobile apps, and desktop software. Outside of work, I love learning new skills,
-            designing, and exploring opportunities for growth around the world.
-        </p>
+            <div class="grid-3">
+                <article>
+                    <h3>Guided & Safe</h3>
+                    <p>All trips led by certified guides with modern safety gear and training.</p>
+                </article>
+
+                <article>
+                    <h3>Trips for Everyone</h3>
+                    <p>From gentle family floats to full-day expeditions — pick your level.</p>
+                </article>
+
+                <article>
+                    <h3>Committed to Nature</h3>
+                    <p>We follow Leave No Trace principles and help preserve river ecosystems.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter container" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">Join Our Newsletter</h2>
+            <p>Get trip announcements, safety tips, and special offers.</p>
+            <form class="newsletter-form" action="#" method="post" novalidate>
+                <label for="newsletter-email" class="visually-hidden">Email address</label>
+                <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Call to action -->
+        <section class="container cta" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Ready for an Adventure?</h2>
+            <p>Reserve your spot — our groups fill quickly during peak season.</p>
+            <a href="contact.html" class="btn prominent">Book Now</a>
+        </section>
     </main>
 
-    <aside>
-        <h2>Nigeria</h2>
-        <img src="images/nigeria-flag.jpg" alt="Flag of Nigeria">
-        <p>
-            Nigeria is a country in West Africa known for its diverse cultures, rich history,
-            and natural resources. It is the most populous country in Africa and often called
-            the "Giant of Africa." Nigeria is famous for its music, film industry (Nollywood),
-            and vibrant traditions.
-        </p>
-    </aside>
-
-    <footer>
-        <p>&copy; 2025 | Eze Ernest Tobechukwu | Nigeria</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Whitewater Rafting Co. — All rights reserved.</p>
+            <p class="small-links">
+                <a href="about.html">About</a> ·
+                <a href="trips.html">Trips</a> ·
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
     </footer>
+
+    <script>
+        // Simple JS to set current year (no external resources)
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
-
