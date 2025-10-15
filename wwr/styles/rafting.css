@@ -1,162 +1,216 @@
-/* Step 4.3: Define CSS Variables */
-:root {
-    --primary-color: #396E94;
-    --secondary-color: #E7C24F;
-    --accent1-color: #A43312;
-    --accent2-color: #381D2A;
+/* ================================
+   Whitewater Rafting Co. - Style.css
+   Author: Ernest Tobechukwu
+   ================================ */
 
-    /* Use system fonts instead of Google Fonts */
+/* ---------- Root Variables ---------- */
+:root {
+    --primary-color: #005b96; /* Deep river blue */
+    --secondary-color: #e0f7ff; /* Light blue-white water */
+    --accent1-color: #023e73; /* Dark navy for depth */
+    --accent2-color: #ffffff; /* True white */
+
     --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     --body-font: "Helvetica Neue", Arial, sans-serif;
 
-    --nav-background-color: #396E94;
-    --nav-link-color: #FFFFFF;
-    --nav-hover-link-color: #E7C24F;
-    --nav-hover-background-color: #381D2A;
+    --nav-background-color: var(--primary-color);
+    --nav-link-color: #ffffff;
+    --nav-hover-link-color: #e0f7ff;
+    --nav-hover-background-color: #023e73;
 }
 
-/* Step 4.4: Reset the box-model */
+/* ---------- Global Reset ---------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Step 4.5 & 4.6: Style the body and center the page */
+/* ---------- Body ---------- */
 body {
     font-family: var(--body-font);
-    color: var(--accent2-color);
-    max-width: 840px;
+    color: var(--accent1-color);
+    background-color: var(--secondary-color);
+    max-width: 1000px;
     margin: 0 auto;
     line-height: 1.6;
-    background-color: #fdfdfd;
 }
 
-/* Step 4.7: Style the headings */
-h1, h2, h3, h4, h5, h6 {
+/* ---------- Headings ---------- */
+h1, h2, h3, h4 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* Step 4.8: Basic margin and padding for elements */
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* Header and Navigation Styling */
+/* ---------- Header and Navigation ---------- */
 header {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--nav-background-color);
     padding: 1rem;
 }
 
 header img {
-    width: 100px;
+    width: 90px;
     height: auto;
-}
-
-nav {
-    text-align: right;
+    border-radius: 5px;
 }
 
 nav a {
     color: var(--nav-link-color);
     text-decoration: none;
-    padding: 1rem;
-    font-weight: 700;
+    padding: 0.8rem 1rem;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
 nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-/* Hero Section Styling */
+/* ---------- Hero Section ---------- */
 .hero {
     position: relative;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
+    display: block;
+    border-radius: 0 0 10px 10px;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
-    background-color: rgba(57, 110, 148, 0.8);
+    background-color: rgba(0, 91, 150, 0.85);
     color: white;
     padding: 1rem;
+    width: 90%;
+    border-radius: 8px;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 1rem;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+/* ---------- History / About Section ---------- */
+.history {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
 }
 
-/* History and Adventure Sections */
-section h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
 }
 
-/* Footer Styling */
-footer {
-    border-top: 1px solid #ccc;
+.history-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ---------- Adventures Gallery ---------- */
+.adventures {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: #f5f5f5;
+    margin: 2rem 0;
 }
 
-footer p {
-    margin-bottom: 0.5rem;
-}
-
-.socialmedia {
-    display: flex;
-    justify-content: center;
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
 }
 
-/* Step 4.9: Remove underlines from social media links */
-.socialmedia a {
+.adventure-gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* ---------- Trips Page ---------- */
+.trips {
+    margin: 2rem 0;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.trip-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: scale(1.03);
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.trip-card h3 {
+    color: var(--primary-color);
+    margin: 1rem 0 0.5rem 0;
+}
+
+.trip-card p {
+    color: #333;
+}
+
+/* ---------- Call to Action ---------- */
+.call-to-action {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.call-to-action a {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.7rem 1.5rem;
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.socialmedia img {
-    width: 30px;
-    height: auto;
+.call-to-action a:hover {
+    background-color: var(--accent1-color);
+    color: white;
 }
 
-
- /* Contact Page Specific Styles */
-
-/* Contact Hero Section */
+/* ---------- Contact Page ---------- */
 .contact-hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/contact-hero.jpg');
     background-size: cover;
@@ -172,14 +226,8 @@ footer p {
     color: white;
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    background: none;
-    position: static;
-    transform: none;
-    width: auto;
-    padding: 0;
 }
 
-/* Contact Container Layout */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -187,167 +235,24 @@ footer p {
     margin-bottom: 3rem;
 }
 
-/* Company Info Section */
-.company-info h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: left;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-}
-
-.contact-details {
-    display: grid;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.address h3, .contact-methods h3 {
-    color: var(--accent1-color);
-    margin-bottom: 0.5rem;
-}
-
-.map {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.map iframe {
-    border: none;
-    display: block;
-}
-
-/* Contact Form Styles */
-.contact-form {
-    background: #f8f9fa;
+.contact-form, .company-info {
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.contact-form h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: left;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--accent2-color);
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-/* Radio Button Styles */
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.radio-option {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.radio-option:hover {
-    background-color: #e9ecef;
-}
-
-.radio-option input[type="radio"] {
-    margin-right: 0.75rem;
-    transform: scale(1.2);
-}
-
-/* Checkbox Styles */
-.checkbox-option {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.checkbox-option:hover {
-    background-color: #e9ecef;
-}
-
-.checkbox-option input[type="checkbox"] {
-    margin-right: 0.75rem;
-    transform: scale(1.2);
-}
-
-/* Submit Button */
-.submit-btn {
-    background-color: var(--accent1-color);
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-.submit-btn:hover {
-    background-color: #8a2b0c;
-}
-
-/* Employee Profiles */
+/* ---------- Employee Section ---------- */
 .employee-profiles {
     margin: 3rem 0;
     text-align: center;
 }
 
-.employee-profiles h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-    display: inline-block;
-}
-
 .employees-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-}
-
-.employee {
-    text-align: center;
 }
 
 .employee img {
@@ -355,39 +260,31 @@ footer p {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--secondary-color);
-    margin-bottom: 1rem;
+    border: 4px solid var(--primary-color);
 }
 
-.employee figcaption {
-    font-size: 0.9rem;
-    color: var(--accent2-color);
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
 }
 
-/* Responsive Design */
+footer a img {
+    width: 30px;
+    margin: 0 0.5rem;
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .contact-container {
+    .history-content, .contact-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
     }
-    
-    .employees-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .contact-hero h1 {
-        font-size: 2rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .contact-form {
-        padding: 1rem;
-    }
-    
-    .employee img {
-        width: 120px;
-        height: 120px;
+    .hero h1 {
+        font-size: 1.5rem;
+        top: 20%;
     }
 }
